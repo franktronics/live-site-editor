@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { VisualEditorContext, VisualEditorProvider } from 'live-site-editor'
 
-import { ExampleComponent } from 'live-site-editor'
-import 'live-site-editor/dist/index.css'
+const Menu = () => {
+  const {opened, toggleOpen} = useContext(VisualEditorContext)
 
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const handleClick = () => {
+    console.log('ok');
+
+    toggleOpen()
+  }
+
+  return <div>
+    <button onClick={handleClick}>{opened? 'Ouvert': 'Ferme'}</button>
+  </div>
 }
 
+const App = () => {
+  return <VisualEditorProvider>
+    <Menu />
+  </VisualEditorProvider>
+}
 export default App

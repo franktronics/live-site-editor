@@ -1,10 +1,10 @@
-import * as React from 'react'
-import styles from './styles.module.css'
+export {VisualEditorProvider as VisualEditorProvider} from './provider/VisualEditorProvider'
+export {VisualEditorContext as VisualEditorContext} from './context/VisualEditorContext'
+import React from 'react'
 
-interface Props {
-  text: string
-}
+export const ComponentExample = () => {
 
-export const ExampleComponent = ({ text }: Props) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+  return <div>
+    ok
+  </div>
 }
