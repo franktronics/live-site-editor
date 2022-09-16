@@ -2,12 +2,10 @@ import React, { useContext } from 'react'
 import { VisualEditorContext, VisualEditorProvider } from 'live-site-editor'
 
 const Menu = () => {
-  const {opened, toggleOpen} = useContext(VisualEditorContext)
+  const {opened, toggleTheme} = useContext(VisualEditorContext)
 
   const handleClick = () => {
-    console.log('ok');
-
-    toggleOpen()
+    toggleTheme()
   }
 
   return <div>
